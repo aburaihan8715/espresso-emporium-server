@@ -20,6 +20,7 @@ const client = new MongoClient(uri, {
   },
 });
 
+// database connection
 async function run() {
   try {
     const coffeeDB = client.db("coffeeDB");
