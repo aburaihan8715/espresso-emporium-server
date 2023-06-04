@@ -83,7 +83,7 @@ async function run() {
 run().catch((error) => console.log(error.message));
 
 /*==========================
-home and error routes
+home and error routes start
 =============================*/
 // home route
 app.get("/", (req, res) => {
@@ -99,6 +99,10 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
   res.status(501).send({ message: "Something went wrong!" });
 });
+
+/*==========================
+home and error routes end
+=============================*/
 
 module.exports = app;
 
